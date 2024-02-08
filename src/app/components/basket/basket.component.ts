@@ -10,7 +10,7 @@ import { productSelector } from '../../store/selectors';
 @Component({
   selector: 'app-basket',
   standalone: true,
-  imports: [NgIf,AsyncPipe,NgFor],
+  imports: [NgIf, AsyncPipe, NgFor],
   templateUrl: './basket.component.html',
   styleUrl: './basket.component.scss'
 })
@@ -25,4 +25,7 @@ export class BasketComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  removeFromBasket(product: Product) {
+    this.store.dispatch(ProductsActions.removeProduct({product: product}))
+  }
 }

@@ -1,9 +1,8 @@
 import { createReducer, on } from '@ngrx/store';
-import { addProduct, removeProduct } from './actions';
-import { AppState, Cart } from '../models/appState.interface';
+import { Basket } from '../models/appState.interface';
 import * as PostsActions from './actions';
 
-export const initialState: Cart = {
+export const initialState: Basket = {
   products: []
 };
 

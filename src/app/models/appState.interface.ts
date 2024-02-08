@@ -1,9 +1,9 @@
 import { Product } from "./product.interface";
 
 export interface AppState{
-  products: Cart;
+  products: Basket;
 }
 
-export interface Cart {
+export interface Basket {
   products: Product[]
 }
