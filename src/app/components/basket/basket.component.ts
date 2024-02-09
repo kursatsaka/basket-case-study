@@ -6,11 +6,14 @@ import { AppState } from '../../models/appState.interface';
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Product } from '../../models/product.interface';
 import { productSelector } from '../../store/selectors';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-basket',
   standalone: true,
-  imports: [NgIf, AsyncPipe, NgFor],
+  imports: [NgIf, AsyncPipe, NgFor, MatCardModule, MatButtonModule, MatIconModule],
   templateUrl: './basket.component.html',
   styleUrl: './basket.component.scss'
 })
@@ -26,6 +29,6 @@ export class BasketComponent implements OnInit {
   }
 
   removeFromBasket(product: Product) {
-    this.store.dispatch(ProductsActions.removeProduct({product: product}))
+    this.store.dispatch(ProductsActions.removeProduct({ product: product }))
   }
 }

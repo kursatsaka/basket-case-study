@@ -1,6 +1,19 @@
-<div *ngFor="let product of products$ | async;">
-  <span>
-    {{ product.Name }}
-    <button (click)="removeFromBasket(product)">kaldır</button>
-  </span>
+<div class="page-content">
+  <mat-card *ngFor="let product of products$ | async;">
+    <mat-card-header>
+      <mat-card-title>
+        <img class="product-small-image" [src]="product.ImageUrl">
+        {{ product.Name }}
+      </mat-card-title>
+      <mat-card-actions>
+        <button mat-mini-fab>
+          <mat-icon>add</mat-icon>
+        </button>
+        <span class="quantity">1</span>
+        <button mat-mini-fab>
+          <mat-icon>remove</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card-header>
+  </mat-card>
 </div>
