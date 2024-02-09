@@ -1,4 +1,5 @@
 export interface Product {
   Id:number,
-  Name: string
+  Name: string,
+  ImageUrl: string
 }

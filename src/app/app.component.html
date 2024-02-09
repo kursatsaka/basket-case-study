@@ -1,3 +1,13 @@
-<button [routerLink]="['basket']">Sepet</button>
+<mat-toolbar class="primary-background-color">
+  <button [routerLink]="['home']" mat-icon-button class="example-icon">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span class="homepage" [routerLink]="['home']">Migros</span>
+  <span class="example-spacer"></span>
+  <button [routerLink]="['basket']" class="mat-mdc-tooltip-trigger mat-mdc-menu-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base">
+    <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
+    <mat-icon matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+  </button>
+</mat-toolbar>
 
 <router-outlet></router-outlet>

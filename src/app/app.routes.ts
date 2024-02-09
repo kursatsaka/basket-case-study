@@ -3,6 +3,7 @@ import { BasketComponent } from './components/basket/basket.component';
 import { ProductsComponent } from './components/products/products.component';
 
 export const routes: Routes = [
-  { path: 'products', component: ProductsComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: ProductsComponent },
   { path: 'basket', component: BasketComponent },
 ];

@@ -1,20 +1,25 @@
 [{
   "Id": 1,
-  "Name": "Süt"
+  "Name": "Süt",
+  "ImageUrl": "./assets/images/sut.jpg"
 },
 {
   "Id": 2,
-  "Name": "Meyve Suyu"
+  "Name": "Meyve Suyu",
+  "ImageUrl": "./assets/images/meyvesuyu.jpg"
 },
 {
   "Id": 3,
-  "Name": "Çay"
+  "Name": "Çay",
+  "ImageUrl": "./assets/images/cay.jpg"
 },
 {
   "Id": 4,
-  "Name": "Yüzey Temizleyici"
+  "Name": "Yüzey Temizleyici",
+  "ImageUrl": "./assets/images/yuzeytemizleyici.jpg"
 },
 {
   "Id": 5,
-  "Name": "Filtre Kahve"
+  "Name": "Filtre Kahve",
+  "ImageUrl": "./assets/images/filtrekahve.jpg"
 }]
