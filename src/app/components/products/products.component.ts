@@ -5,7 +5,7 @@ import { AsyncPipe, NgFor } from '@angular/common';
 import { Product } from '../../models/product.interface';
 import { AppState } from '../../models/appState.interface';
 import { Store } from '@ngrx/store';
-import * as PostsActions from './../../store/actions';
+import * as ProductsActions from './../../store/actions';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -28,6 +28,6 @@ export class ProductsComponent implements OnInit {
   }
 
   addToBasket(product: Product) {
-    this.store.dispatch(PostsActions.addProduct({ product: product }))
+    this.store.dispatch(ProductsActions.addProduct({ product:  { ...product, Quantity: 1 } }))
   }
 }

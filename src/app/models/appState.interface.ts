@@ -1,9 +1,9 @@
-import { Product } from "./product.interface";
+import { Product, ProductInBasket } from "./product.interface";
 
 export interface AppState{
   products: Basket;
 }
 
 export interface Basket {
-  products: Product[]
+  products: ProductInBasket[]
 }

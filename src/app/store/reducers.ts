@@ -8,11 +8,24 @@ export const initialState: Basket = {
 
 export const productsReducer = createReducer(initialState,
   on(PostsActions.addProduct, (state, action) => {
-    state = {
-      ...state,
-      products: [...state.products, action.product]
+    let existingProduct = state.products.find(e => e.Id === action.product.Id);
+    if(existingProduct){
+      const updatedProducts = state.products.map((item) =>
+        item.Id === action.product.Id
+          ? { ...item, Quantity: item.Quantity + 1 }
+          : item
+      );
+      return {
+        ...state,
+        products: updatedProducts,
+      };
     }
-    return state;
+    else{
+      return {
+        ...state,
+        products: [...state.products, action.product],
+      };
+    }
   }),
   on(PostsActions.removeProduct, (state, action) => {
     const products = [...state.products];
@@ -25,5 +38,16 @@ export const productsReducer = createReducer(initialState,
     }
 
     return state;
-  })
+  }),
+  on(PostsActions.decreaseQuantity, (state, action) => {
+      const updatedProducts = state.products.map((item) =>
+        item.Id === action.product.Id
+          ? { ...item, Quantity: item.Quantity - 1 }
+          : item
+      );
+      return {
+        ...state,
+        products: updatedProducts,
+      };
+  }),
 );

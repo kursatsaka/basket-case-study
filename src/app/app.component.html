@@ -6,7 +6,7 @@
   <span class="example-spacer"></span>
   <button [routerLink]="['basket']" class="mat-mdc-tooltip-trigger mat-mdc-menu-trigger mdc-icon-button mat-mdc-icon-button mat-unthemed mat-mdc-button-base">
     <span class="mat-mdc-button-persistent-ripple mdc-icon-button__ripple"></span>
-    <mat-icon matBadge="15" matBadgeColor="warn">shopping_cart</mat-icon>
+    <mat-icon *ngIf="(products$ | async) as products" matBadge="{{products.length}}" matBadgeColor="warn">shopping_cart</mat-icon>
   </button>
 </mat-toolbar>
 
