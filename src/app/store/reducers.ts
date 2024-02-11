@@ -1,13 +1,13 @@
 import { createReducer, on } from '@ngrx/store';
 import { Basket } from '../models/appState.interface';
-import * as PostsActions from './actions';
+import * as ProductsActions from './actions';
 
 export const initialState: Basket = {
   products: []
 };
 
 export const productsReducer = createReducer(initialState,
-  on(PostsActions.addProduct, (state, action) => {
+  on(ProductsActions.addProduct, (state, action) => {
     let existingProduct = state.products.find(e => e.Id === action.product.Id);
     if(existingProduct){
       const updatedProducts = state.products.map((item) =>
@@ -27,7 +27,7 @@ export const productsReducer = createReducer(initialState,
       };
     }
   }),
-  on(PostsActions.removeProduct, (state, action) => {
+  on(ProductsActions.removeProduct, (state, action) => {
     const products = [...state.products];
     const index = products.findIndex(x => x.Id === action.product.Id);
     products.splice(index, 1);
@@ -39,7 +39,7 @@ export const productsReducer = createReducer(initialState,
 
     return state;
   }),
-  on(PostsActions.decreaseQuantity, (state, action) => {
+  on(ProductsActions.decreaseQuantity, (state, action) => {
       const updatedProducts = state.products.map((item) =>
         item.Id === action.product.Id
           ? { ...item, Quantity: item.Quantity - 1 }

@@ -1,29 +1,29 @@
-.mat-mdc-card{
+.mat-mdc-card {
   background-color: white;
   margin-bottom: 30px;
 }
-.mat-mdc-card-header{
+.mat-mdc-card-header {
   justify-content: space-between;
 }
-.quantity{
+.quantity {
   font-weight: bold;
   font-size: larger;
   margin: 10px;
 }
-.product-small-image{
+.product-small-image {
   width: 80px;
   height: 90px;
   order: 0;
 }
 ::ng-deep {
-.mat-mdc-card-header-text{
-  order: 1;
-  flex: 1;
+  .mat-mdc-card-header-text {
+    order: 1;
+    flex: 1;
+  }
 }
+.mdc-card__actions {
+  order: 2;
 }
-.mdc-card__actions{
-  order:2;
-}
-.mat-mdc-card-title{
+.mat-mdc-card-title {
   margin-left: 15px;
 }

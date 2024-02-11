@@ -1,7 +1,7 @@
-import { Product, ProductInBasket } from "./product.interface";
+import { ProductInBasket } from "./product.interface";
 
 export interface AppState{
-  products: Basket;
+  basket: Basket;
 }
 
 export interface Basket {

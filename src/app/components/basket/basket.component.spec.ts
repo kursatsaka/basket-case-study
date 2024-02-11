@@ -67,7 +67,7 @@ describe('BasketComponent', () => {
 
   it('should display a list of items after the data is loaded', () => {
     const product: ProductInBasket = { Id: 1, Name: 'testProduct',ImageUrl: "testUrl", Quantity: 1 };
-    store.setState({products: {
+    store.setState({basket: {
       products: [product]
     }});
 

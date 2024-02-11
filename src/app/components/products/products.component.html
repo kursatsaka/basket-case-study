@@ -2,7 +2,7 @@
   <mat-grid-list cols="4" rowHeight="100px">
     <mat-grid-tile *ngFor="let product of products$ | async;" [colspan]="1" [rowspan]="5">
       <mat-card class="example-card">
-        <img mat-card-image [src]="product.ImageUrl" alt="Photo of a Shiba Inu">
+        <img mat-card-image [src]="product.ImageUrl">
         <mat-card-content>
           <p>
             {{product.Name}}

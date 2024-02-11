@@ -22,4 +22,19 @@
   "Id": 5,
   "Name": "Filtre Kahve",
   "ImageUrl": "./assets/images/filtrekahve.jpg"
+},
+{
+  "Id": 6,
+  "Name": "Mandalina",
+  "ImageUrl": "./assets/images/mandalina.jpg"
+},
+{
+  "Id": 7,
+  "Name": "Temizlik Havlusu",
+  "ImageUrl": "./assets/images/temizlikhavlusu.jpg"
+},
+{
+  "Id": 8,
+  "Name": "Burçak",
+  "ImageUrl": "./assets/images/burcak.jpg"
 }]

@@ -1,19 +1,13 @@
 <div class="page-content">
   <mat-card *ngFor="let product of products$ | async;">
     <mat-card-header>
-
       <img class="product-small-image" mat-card-image [src]="product.ImageUrl">
-
       <mat-card-title>{{ product.Name }}</mat-card-title>
       <mat-card-subtitle>
         <button mat-icon-button color="primary" (click)="removeFromBasket(product)">
           <mat-icon>delete</mat-icon>
         </button>
       </mat-card-subtitle>
-
-
-
-
       <mat-card-actions>
         <button *ngIf="product.Quantity > 1" mat-mini-fab (click)="decreaseQuantity(product)">
           <mat-icon>remove</mat-icon>
